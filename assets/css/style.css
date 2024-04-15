@@ -1,6 +1,7 @@
 @font-face {
   font-family: "B-Nazanin-Bold";
-  src: url("../fonts/B-Nazanin-Bold.ttf.woff") format("woff"),
+  src:
+    url("../fonts/B-Nazanin-Bold.ttf.woff") format("woff"),
     url("../fonts/B-Nazanin-Bold.ttf.svg#B-Nazanin-Bold") format("svg"),
     url("../fonts/B-Nazanin-Bold.ttf.eot"),
     url("../fonts/B-Nazanin-Bold.ttf.eot?#iefix") format("embedded-opentype");
@@ -69,7 +70,11 @@ html[dir="rtl"] .logo {
 .head-info small {
   font-weight: bold;
 }
-
+.section-title {
+  background-color: rgba(194, 194, 244, 0.615);
+  padding-inline-start: 0.6rem;
+  border-inline-start: 5px solid blue;
+}
 .summary {
   width: 90%;
 }
@@ -111,15 +116,14 @@ html[dir="rtl"] .dciLogo{
 */
 
 @media screen and (min-width: 768px) {
-    .head-top {
-      margin-inline-start: 12rem;
-      margin-inline-end: 12rem;
-    }
-    .summary {
-      width: 40%;
-    }
-    .education {
-        width: 40%;
-       
-      }
+  .head-top {
+    margin-inline-start: 12rem;
+    margin-inline-end: 12rem;
   }
+  .summary {
+    width: 40%;
+  }
+  .education {
+    width: 40%;
+  }
+}
