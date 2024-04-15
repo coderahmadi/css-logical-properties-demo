@@ -73,7 +73,7 @@ html[dir="rtl"] .logo {
 .section-title {
   background-color: rgba(194, 194, 244, 0.615);
   padding-inline-start: 0.6rem;
-  border-inline-start: 5px solid blue;
+  border-inline-start: 5px solid rgb(2, 2, 101);
 }
 .summary {
   width: 90%;
