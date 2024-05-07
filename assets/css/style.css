@@ -1,3 +1,4 @@
+/* Importing B-Nazanin-Bold font */
 @font-face {
   font-family: "B-Nazanin-Bold";
   src:
@@ -9,18 +10,22 @@
   font-style: normal;
 }
 
+/* Setting B-Nazanin as font size of all content */
 * {
   font-family: "B-Nazanin-Bold";
 }
+
+/* Alternative Logical Property for `` */
 header {
-  height: 6rem;
+  block-size: 6rem; /* Alternative Logical Property for `height: 6rem;` */
 }
+
 .head-top {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 1rem;
+  padding-inline: 1rem; /* css logical property: for horizontal padding*/
 }
 
 main {
@@ -28,9 +33,9 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  inline-size: 100%; /* Alternative Logical Property for `Width: 100%;` */
   gap: 2rem;
-  margin-bottom: 8rem;
+  margin-block-end: 8rem; /* Alternative Logical Property for `margin-bottom: 8rem;` */
 }
 
 .head {
@@ -38,92 +43,107 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  block-size: 100%;
 }
 
-.logo {
-  width: 5.4rem;
-  height: 5.4rem;
-  border-radius: 5%;
-  /* margin-right: 1rem; */
-  margin-inline-end: 1rem; /* with CSS Logical Property */
+.avatar {
+  inline-size: 5.3rem;
+  block-size: 5.3rem;
+  border-start-start-radius: 15%; /*  border-top-left-radius:15%; */
+  border-start-end-radius: 2%; /*  border-top-right-radius:2%; */
+  border-end-end-radius: 2%; /*  border-bottom-right-radius:2%; */
+  border-start-end-radius: 1%; /*  border-bottom-left-radius:2%; */
+  z-index: 1;
+  align-self: flex-end;
 }
-/* 
-
-html[dir="rtl"] .logo {
-  margin-right: 0;
-  margin-left: 1rem;
-}*/
-
-.head-info {
-  /* border-left: 1px solid lightgray; */
-  /* padding-left: 0.6rem; */
-  /* text-align: left; */
-  border-inline-start: 1px solid lightgray;
+.avatar-design {
+  inline-size: 5.8rem;
+  block-size: 5.8rem;
+  border-inline-start: 3px solid rgb(2, 2, 101);
+  border-block-start: 3px solid rgb(2, 2, 101);
+  border-start-start-radius: 15%;
+  z-index: 0;
+  margin-inline-end: -5.3rem;
+  align-self: flex-end;
+}
+.text-part {
+  margin-inline-start: 1rem;
+  block-size: 100%;
+  /* a border, padding and text-alignment */
+  border-inline-start: 4px solid rgb(199, 198, 198);
   padding-inline-start: 0.6rem;
+  padding-inline-end: 0.5rem;
+  padding-block: 0.2rem;
   text-align: start;
+  background-color: #ecf3f0f2;
 }
-.head-info p {
-  margin-top: 0;
-  margin-block-end: 0.3rem;
-}
-.head-info small {
-  font-weight: bold;
-}
-.section-title {
-  background-color: rgba(194, 194, 244, 0.615);
-  padding-inline-start: 0.6rem;
-  border-inline-start: 5px solid rgb(2, 2, 101);
-}
-.summary {
-  width: 90%;
-}
-.summary h3 {
-  /* text-align: left; */
-  text-align: start;
-}
-.summary p {
-  /* text-align: left; */
-  text-align: start;
+
+.text-part p {
+  margin-block-start: 0rem; /* Alternative Logical Property for `margin-top:0rem` */
+  margin-block-end: 0.4rem; /* Alternative Logical Property for `margin-bottom:1rem` */
 }
 
 .links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
+  padding-block: 0.2rem;
 }
 
-.education {
-  width: 90%;
+.section-title {
+  background-color: rgba(194, 194, 244, 0.615);
+  padding-inline-start: 0.6rem;
+  border-inline-start: 5px solid rgb(2, 2, 101);
+}
+
+.summary {
+  inline-size: 90%;
+}
+
+.summary h3 {
+  text-align: start; /* Alternative Logical Property for `text-align: left;` */
+}
+
+.summary p {
+  text-align: start;
+}
+
+
+
+.experience {
+  /* width: 90%; */
+  inline-size: 90%;
   display: flex;
   flex-direction: column;
 }
-.dciLogo {
-  width: 8rem;
-  /*margin-right: 20px;*/
+
+.dciavatar {
+  inline-size: 8rem;
+  /*
+    margin-right: 20px; LTR
+    margin-left: 20px; RTL
+  */
   margin-inline-end: 20px;
-  /*float: left;*/
+
+  /*
+  float: left; LTR
+  float: right; RTL
+  */
   float: inline-start;
 }
-
-/*
-html[dir="rtl"] .dciLogo{
-    margin-right: 0;
-    margin-left: 20px;
-    float: right;
-}
-*/
 
 @media screen and (min-width: 768px) {
   .head-top {
     margin-inline-start: 12rem;
     margin-inline-end: 12rem;
   }
+
   .summary {
-    width: 40%;
+    inline-size: 55%;
   }
-  .education {
-    width: 40%;
+
+  .experience {
+    inline-size: 55%;
   }
 }
